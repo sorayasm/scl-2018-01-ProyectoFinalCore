@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inicio</title>
+    <title>Queltehue - Registro de Administradores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -12,23 +12,26 @@
 </head>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <form class="col">
             <p>Registro de Administradores</p>
             <br>
-            <label for="name">Nombre Completo:</label>
-            <input type="text" id="name" aria-placeholder="Ingresa tu nombre">
+            <label for="admin-email">Correo</label>
+            <input type="email" id="email" placeholder="Correo electrónico*">
             <br>
-            <label for="dni">Ingresa tu RUT o DNI sin puntos ni guiones:</label>
-            <input type="text" id="dni" aria-placeholder="Ingresa tu RUT">
+            <label for="pass">Ingresa una contraseña:</label>
+            <input type="password" id="password" aria-placeholder="Ingresa una clave">
             <br>
             <label for="key">Clave de seguridad:</label>
-            <input type="numbre" id="key" aria-placeholder="Ingresa tu clave de seguridad">
+            <input type="number" id="key" aria-placeholder="Ingresa tu clave de seguridad">
             <br>
-        </div>
+            <input type="button" id="registerbutton" onclick="register()" value="Registrate">
+            <p>¿Ya tienes cuenta? <a href="index.html">Inicia Sesión</a>
+        </form>
     </div>
 </div>
 
 
+</div>
 
 
 <body>
@@ -45,13 +48,10 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/admin-register.js"></script>
     <script src="js/main.js"></script>
 </body>
 

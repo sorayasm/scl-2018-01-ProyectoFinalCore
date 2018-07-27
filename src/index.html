@@ -13,25 +13,26 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <p>Registro de visitas</p>
-            <br>
-            <label for="name">Nombre Completo:</label>
-            <input type="text" id="name" aria-placeholder="Ingresa tu nombre">
-            <br>
-            <label for="dni">Ingresa tu RUT o DNI sin puntos ni guiones:</label>
-            <input type="text" id="dni" aria-placeholder="Ingresa tu RUT">
-            <br>
-            <label for="company">Empresa o organización:</label>
-            <input type="text" id="company" aria-placeholder="Escribe de qué organización vienes">
-            <br>
-            <label for="position">Cargo:</label>
-            <input type="text" id="position" aria-placeholder="Escribe tu cargo">
-            <br>
-            <label for="mail">Correo:</label>
-            <input type="mail" id="mail" aria-placeholder="Escribe tu correo">
-            <br>
-            <label for="motive">Selecciona el motivo de tu visita:</label>
-            <select>
+            <div id="visit-register">
+                <h1>Registro de visitas</h1>
+                <br>
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" aria-placeholder="Ingresa tu nombre">
+                <br>
+                <label for="dni">Ingresa tu RUT o DNI sin puntos ni guiones:</label>
+                <input type="text" id="dni" aria-placeholder="Ingresa tu RUT">
+                <br>
+                <label for="company">Empresa o organización:</label>
+                <input type="text" id="company" aria-placeholder="Escribe de qué organización vienes">
+                <br>
+                <label for="position">Cargo:</label>
+                <input type="text" id="position" aria-placeholder="Escribe tu cargo">
+                <br>
+                <label for="mail">Correo:</label>
+                <input type="mail" id="mail" aria-placeholder="Escribe tu correo">
+                <br>
+                <label for="motive">Selecciona el motivo de tu visita:</label>
+                <select id="motive">
                 <option value="meeting">Reunión o Evento</option>
                 <option value="interview">Entrevista</option>
                 <option value="visit">Visita Personal</option>
@@ -39,9 +40,9 @@
                 <option value="info">Información sobre el espacio de Cowork</option>
                 <option value="other">Otro</option>
               </select>
-            <br>
-            <label for="time">Selecciona la duración de tu visita:</label>
-            <select>
+                <br>
+                <label for="time">Selecciona la duración de tu visita:</label>
+                <select>
                 <option value="15">15 minutos</option>
                 <option value="30">30 minutos</option>
                   <option value="45">45 minutos</option>
@@ -55,12 +56,25 @@
                   <option value="420">7 horas</option>
                   <option value="480">8 horas</option>
                 </select>
-            <br>
-            <label for="resident-company">Selecciona la empresa que visitas:</label>
-            <br><br>
-            <label for="resident-name">Selecciona el nombre de la persona que visitas:</label>
-            <br><br>
-            <label for="resident-name">Tomar foto</label>
+                <br>
+                <label for="resident-company">Selecciona la empresa que visitas:</label>
+                <br><br>
+                <label for="resident-name">Selecciona el nombre de la persona que visitas:</label>
+                <br><br>
+                <label for="resident-name">Tomar foto</label>
+                <br><br>
+            </div>
+            <div id="admin-login">
+                <h1>Login admin</h1>
+                <br>
+                <input type="email" id="admin-user" placeholder="usuario*">
+                <br>
+                <input type="password" id="password" placeholder="Contraseña*">
+                <br>
+                <small id="emailHelp" class="form-text text-muted">Campos obligatorios*</small>
+                <br>
+                <input type="button" id="loginbutton" onclick="loginWithFirebase()" value="Iniciar Sesión">
+            </div>
         </div>
     </div>
 </div>
@@ -82,10 +96,6 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
