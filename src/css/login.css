@@ -21,3 +21,12 @@ body{
 #loginbutton{
     background-color: #BBBE64;
 }
+#registrarCuenta{
+    padding-top: 1%;
+    font-size: 14px;
+}
+#registrate{
+    color: #E4BB59;
+    font-size: 18px;
+
+}
