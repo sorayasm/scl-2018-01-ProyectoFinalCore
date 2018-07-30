@@ -9,21 +9,21 @@ function register() {
 }
 
 function registerWithFirebase() {
-    const emailValue = email.value;
-    const passwordValue = password.value;
-    const name = adminName.value;
-    const companyname = adminCompany.value;
-    const contactPhone = adminPhone.value;
-    const photo = adminPhoto.value;
-    firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
+    const amail = adminMail.value;
+    const apassword = adminPassword.value;
+    const aname = adminName.value;
+    const acompany = adminCompany.value;
+    const aphone = adminPhone.value;
+    const aphoto = adminPhoto.value;
+    firebase.auth().createUserWithEmailAndPassword(amail, apassword)
         .then((userData) => {
             firebase.database().ref(`administradores/${userData.user.uid}`).set({
                 mail: userData.user.email,
                 uid: userData.user.uid,
-                username: name,
-                company: companyname,
-                phone: contactPhone,
-                photoURL: photo
+                username: aname,
+                company: acompany,
+                phone: aphone,
+                photoURL: aphoto
             });
             console.log("usuario se creo")
         })
