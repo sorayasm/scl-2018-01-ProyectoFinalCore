@@ -6,9 +6,17 @@ El registro de visitantes en una empresa en América Latina es un proceso tedios
 En este proyecto una empresa de coworking ha decidido contratarte para reinventar su proceso de registro de visitantes. Con la entrada de [WeWork](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwilrK_T5KjcAhWCj7MKHexzAEgYABAAGgJxbg&ohost=www.google.cl&cid=CAASE-RoAxXTp1Cd0ErxEHpPSGuF4Hk&sig=AOD64_38ykNPf0QRtI9n4CFtpQpth-MrNQ&q=&ved=0ahUKEwjswKvT5KjcAhVkU98KHUcYCeMQ0QwIJA&adurl=) al mercado latinoamericano, tienen mucha más competencia y necesitan invertir en tecnología para mejorar su servicio; el registro de visitantes es un primer acercamiento. Han dado la referencia de [Envoy](https://envoy.com/) en EEUU (un servicio que ofrece un sistema digital de registro de visitantes) y ustedes tienen que desarrollar una versión mínima viable . 
 
 ## Pitch de proyecto
-Quelteheu es un sistema web que busca facilitar el proceso de registro de visitas de empresas de CoWork. Este sistema permite rcoger los datos de las visitas a traves de una plataforma digital, almacenarlos en una vista de administrador y dar aviso a la persona visita de que alguien le espera.
+¿Sabías que casi el 78% de las personas que pasan por una conserjería debe registrarse, y que éste registro se realiza manualmente?
 
-El nombre Queltehue hace referencia a la ave chilena que da aviso cuando hay un forastero en un territorio a traves de su canto, al igual que el sistema da aviso que llego una visita a su CoWork.
+Somos Queltehue, una solución digital a la sobrecarga de trabajo manual que requiere el registro de visitas de los Cowork en Chile. Atacamos la problemática del registro manual del ingreso de visitantes.
+
+Es así como nuestra solución moderniza el proceso de registro, permitiendo almacenar la información en tiempo real y dando aviso a los residentes de sus visitas. Además, ofrecemos una alternativa de sistema de seguridad con nuestro botón de pánico incluido que contacta con las principales líneas de emergencia.
+
+El mayor beneficio es la optimización de los tiempos de registro automatizado, a través de un sistema sustentable que no utiliza papel. Almacena un banco de datos de información que puede ser relevante para el futuro arriendo de espacios del Cowork, y mejorar el control de acceso y estadía de los visitantes
+
+Nuestro proyecto es el adecuado ya que está creado en base a las necesidades de los clientes y usuarios. Además de aportar mayor seguridad en el entorno en de los Coworks.
+
+El nombre Queltehue hace referencia a la ave chilena que da aviso cuando hay un forastero en un territorio a través de su canto, al igual que el sistema da aviso que llego una visita a su CoWork.
 
 El equipo de Queltehue esta compuesto por:
 - Cecilia Cid, Diseñadora UX.
