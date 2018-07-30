@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+}
+#logo{
+    padding-top: 3%;
+    width: 15%;
+}
+#login{
+    padding-top: 2%;
+    color: #E4BB59;
+}
+#email{
+    width: 35%;
+    padding: 2px 2px;
+}
+#password{
+    margin-top: 1%;
+    width: 35%;
+    padding: 2px 2px;
+}
