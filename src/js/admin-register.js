@@ -1,37 +1,35 @@
 //Validar clave de Queltehue
-function register() {
+function adminRegister() {
     const key = document.getElementById("key").value;
     if (key === "123456789") {
         registerWithFirebase();
     } else {
-        alert("revisa los datos.");
+        alert("Revisa los datos.");
     };
 }
 
 function registerWithFirebase() {
-    const amail = adminMail.value;
-    const apassword = adminPassword.value;
     const aname = adminName.value;
+    const amail = adminMail.value;
     const acompany = adminCompany.value;
     const aphone = adminPhone.value;
-    const aphoto = adminPhoto.value;
+    const apassword = adminPassword.value;
+
     firebase.auth().createUserWithEmailAndPassword(amail, apassword)
         .then((userData) => {
             firebase.database().ref(`administradores/${userData.user.uid}`).set({
-                mail: userData.user.email,
-                uid: userData.user.uid,
                 username: aname,
+                mail: userData.user.email,
                 company: acompany,
                 phone: aphone,
-                photoURL: aphoto
+                uid: userData.user.uid,
             });
             console.log("usuario se creo")
+            window.location = "index.html";
         })
         .catch((error) => {
             console.log("Error de Firebase > Codigo > " + error.code);
             console.log("Error de Firebase > Mensaje > " + error.message);
 
         });
-
-    window.location = "index.html";
 }

@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div id="visit-register">
+            <form id="visit-register">
                 <h1>Registro de visitas</h1>
                 <br>
                 <label for="name">Nombre Completo:</label>
@@ -63,18 +63,18 @@
                 <br><br>
                 <label for="resident-name">Tomar foto</label>
                 <br><br>
-            </div>
-            <div id="admin-login">
+            </form>
+            <form id="admin-login">
                 <h1>Login admin</h1>
                 <br>
-                <input type="email" id="admin-user" placeholder="usuario*">
+                <input type="email" id="email" placeholder="correo*">
                 <br>
                 <input type="password" id="password" placeholder="Contraseña*">
                 <br>
                 <small id="emailHelp" class="form-text text-muted">Campos obligatorios*</small>
                 <br>
-                <input type="button" id="loginbutton" onclick="newVisit()" value="Iniciar Sesión">
-            </div>
+                <input type="button" id="loginbutton" onclick="loginWithFirebase()" value="Iniciar Sesión">
+            </form>
         </div>
     </div>
 </div>
@@ -100,7 +100,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="js/visit-register.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
