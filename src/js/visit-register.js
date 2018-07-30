@@ -3,7 +3,7 @@ function newVisit() {
     const vname = visitName.value;
     const vdni = visitDNI.value;
     const vmail = visitMail.value;
-    const timestamp = new Date().getTime();
+    const timestamp = new Date().valueOf();
     //const vphoto = visitPhoto; //falta foto
 
     const rootRef = firebase.database().ref();
@@ -22,14 +22,8 @@ function newVisit() {
     });
 }
 
-function selectMotive(event) {
-    const selectElement = event.target;
-    const vmotive = selectElement.value;
-    console.log(value);
-}
+//Select Motivo
 
-function selectTime(event) {
-    const selectElement = event.target;
-    const vtime = selectElement.value;
-    console.log(value);
-}
+const vmotive = document.getElementById("motive");
+vmotive.selectedIndex = elementSelected;
+console.log(elementSelected)

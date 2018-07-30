@@ -32,7 +32,7 @@
                 <input type="mail" id="visitMail" aria-placeholder="Escribe tu correo">
                 <br>
                 <label for="motive">Selecciona el motivo de tu visita:</label>
-                <select id="motive" onchange="selectMotive(event)">
+                <select id="motive" onchange="selectMotive(motive)">
                 <option value="meeting">Reunión o Evento</option>
                 <option value="visit">Visita Personal</option>
                 <option value="delivery">Entrega</option>
@@ -41,7 +41,7 @@
               </select>
                 <br>
                 <label for="visitTime">Selecciona la duración de tu visita:</label>
-                <select id="visitTime" onchange="selectTime(event)">
+                <select id="visitTime" onchange="selectTime(visitTime)">
                 <option value="15">15 minutos</option>
                 <option value="30">30 minutos</option>
                   <option value="45">45 minutos</option>
