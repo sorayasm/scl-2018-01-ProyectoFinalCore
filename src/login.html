@@ -10,29 +10,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <form id="admin-login">
-                <h1>Login Administrador</h1>
-                <br>
-                <input type="email" id="email" placeholder="correo*">
-                <br>
-                <input type="password" id="password" placeholder="Contraseña*">
-                <br>
-                <small id="emailHelp" class="form-text text-muted">Campos obligatorios*</small>
-                <br>
-                <input type="button" id="loginbutton" onclick="loginWithFirebase()" value="Iniciar Sesión">
-                <p>¿Eres administrador y necesitas una cuenta? <a href="admin-register.html">Registrate</a></p>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="admin-login">
+                    <h1>Login Administrador</h1>
+                    <br>
+                    <input type="email" id="email" placeholder="correo*">
+                    <br>
+                    <input type="password" id="password" placeholder="Contraseña*">
+                    <br>
+                    <small id="emailHelp" class="form-text text-muted">Campos obligatorios*</small>
+                    <br>
+                    <input type="button" id="loginbutton" onclick="loginWithFirebase()" value="Iniciar Sesión">
+                    <p>¿Eres administrador y necesitas una cuenta? <a href="admin-register.html">Registrate</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase

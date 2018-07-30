@@ -3,11 +3,11 @@ function newVisit() {
     const vname = visitName.value;
     const vdni = visitDNI.value;
     const vmail = visitMail.value;
-    const timestamp = new Date().valueOf();
+    const timestamp = new Date().toUTCString();
     //const vphoto = visitPhoto; //falta foto
 
     const rootRef = firebase.database().ref();
-    const storesRef = rootRef.child('visitas');
+    const storesRef = rootRef.child("visitas");
     const newStoreRef = storesRef.push();
     newStoreRef.set({
         name: vname,
@@ -20,10 +20,17 @@ function newVisit() {
         enterTime: timestamp,
         //photo: vphoto
     });
+    console.log("registro exitoso")
 }
 
 //Select Motivo
 
-const vmotive = document.getElementById("motive");
-vmotive.selectedIndex = elementSelected;
-console.log(elementSelected)
+function handleClick(select) {
+    vmotive = select;
+    console.log(vmotive)
+}
+
+function handleClick2(select2) {
+    vtime = select2;
+    console.log(vtime)
+}
