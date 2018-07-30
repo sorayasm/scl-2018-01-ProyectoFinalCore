@@ -6,7 +6,7 @@ body{
     width: 15%;
 }
 #login{
-    padding-top: 2%;
+    padding-top: 3%;
     color: #E4BB59;
 }
 #email{
@@ -14,7 +14,10 @@ body{
     padding: 2px 2px;
 }
 #password{
-    margin-top: 1%;
+    margin-top: 8px;
     width: 35%;
     padding: 2px 2px;
+}
+#loginbutton{
+    background-color: #BBBE64;
 }
