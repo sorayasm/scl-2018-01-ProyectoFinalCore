@@ -15,8 +15,8 @@ function newVisit() {
         //company: vcompany,
         //position: vposition,
         mail: vmail,
-        motive: vmotive,
-        visitTime: vtime,
+        motive: vmotive.value,
+        visitTime: vtime.value,
         enterTime: timestamp,
         //photo: vphoto
     });
