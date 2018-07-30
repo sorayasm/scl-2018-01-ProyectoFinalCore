@@ -3,9 +3,11 @@ function adminRegister() {
     const key = document.getElementById("key").value;
     if (key === "123456789") {
         registerWithFirebase();
+
     } else {
         alert("Revisa los datos.");
     };
+    window.location = "index.html";
 }
 
 function registerWithFirebase() {
@@ -25,7 +27,6 @@ function registerWithFirebase() {
                 uid: userData.user.uid,
             });
             console.log("usuario se creo")
-            window.location = "index.html";
         })
         .catch((error) => {
             console.log("Error de Firebase > Codigo > " + error.code);
