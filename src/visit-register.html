@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Queltehue - Registro de Visitas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/photo.css" />
 </head>
 
 <body>
@@ -29,57 +29,58 @@
                     <label for="company">Empresa o organización:</label>
                     <input type="text" id="visitCompany" aria-placeholder="Escribe de qué organización vienes">
                     <br>
-                    <label for="position">Cargo:</label>
-                    <input type="text" id="visitPosition" aria-placeholder="Escribe tu cargo">
-                    <br>
                     <label for="mail">Correo:</label>
                     <input type="mail" id="visitMail" aria-placeholder="Escribe tu correo">
                     <br>
+                    <label for="patente">Si vienes en vehiculo, escribe la patente:</label>
+                    <input type="text" id="visitPatente" aria-placeholder="Escribe  la patente">
+                    <br>
                     <label for="motive">Selecciona el motivo de tu visita:</label>
-                    <select id="motive" onchange="selectMotive(motive)">
-                        <option value="meeting">Reunión o Evento</option>
-                        <option value="visit">Visita Personal</option>
-                        <option value="delivery">Entrega</option>
-                        <option value="info">Información sobre el espacio de CoWork</option>
-                        <option value="other">Otro</option>
-                    </select>
+                    <select>
+                        <option id="meeting" name="select" value="Reunión o Evento" onclick="handleClick(this);">Reunión o Evento</option>
+                        <option id="visit" name="select" value="Visita Personal" onclick="handleClick(this);">Visita Personal</option>
+                        <option id="delivery" name="select" value="Entrega" onclick="handleClick(this);">Entrega</option>
+                        <option id="info" name="select" value="Información sobre el espacio de CoWork" onclick="handleClick(this);">Información sobre el espacio de CoWork</option>
+                        <option id="other" name="select" value="Otro" onclick="handleClick(this);">Otro</option>
+                        </select>
                     <br>
                     <label for="visitTime">Selecciona la duración de tu visita:</label>
-                    <select id="visitTime" onchange="selectTime(visitTime)">
-                        <option value="15">15 minutos</option>
-                        <option value="30">30 minutos</option>
-                        <option value="45">45 minutos</option>
-                        <option value="60">1 hora</option>
-                        <option value="90">Hora y media</option>
-                        <option value="120">2 horas</option>
-                        <option value="180">3 horas</option>
-                        <option value="240">4 horas</option>
-                        <option value="300">5 horas</option>
-                        <option value="360">6 horas</option>
-                        <option value="420">7 horas</option>
-                        <option value="480">8 horas</option>
+                    <select>
+                        <option id="15" name="select" value="15 minutos" onclick="handleClick2(this);">15 minutos</option>
+                        <option id="30" name="select" value="30 minutos" onclick="handleClick2(this);">30 minutos</option>
+                        <option id="45" name="select" value="45 minutos" onclick="handleClick2(this);">45 minutos</option>
+                        <option id="60" name="select" value="1 hora" onclick="handleClick2(this);">1 hora</option>
+                        <option id="60" name="select" value="Hora y media" onclick="handleClick2(this);">Hora y media</option>
+                        <option id="120" name="select" value="2 horas" onclick="handleClick2(this);">2 horas</option>
+                        <option id="180" name="select" value="3 horas" onclick="handleClick2(this);">3 horas</option>
+                        <option id="240" name="select" value="4 horas" onclick="handleClick2(this);">4 horas</option>
+                        <option id="300" name="select" value="5 horas" onclick="handleClick2(this);">5 horas</option>
+                        <option id="360" name="select" value="6 horas" onclick="handleClick2(this);">6 horas</option>
+                        <option id="420" name="select" value="7 horas" onclick="handleClick2(this);">7 horas</option>
+                        <option id="480" name="select" value="8 horas" onclick="handleClick2(this);">8 horas</option>
                     </select>
                     <br>
-                    <label for="resident-company">Selecciona la empresa que visitas:</label>
+                    <label for="resident-name">Busca el nombre de la persona que visitas:</label>
+                    <select name="contenido" id=""></select>
                     <br>
-                    <br>
-                    <label for="resident-name">Selecciona el nombre de la persona que visitas:</label>
-                    <br>
-                    <br>
-                    <label for="resident-name">Tomar foto</label>
-                    <br>
+                    <div class="app">
+                        <a href="#" id="start-camera" class="visible">Haz click para tomar una foto</a>
+                        <video id="camera-stream"></video>
+                        <img id="snap">
+                        <p id="error-message"></p>
+                        <div class="controls">
+                            <a href="#" id="delete-photo" title="Borrar Foto" class="disabled"><i class="far fa-trash-alt"></i></a>
+                            <a href="#" id="take-photo" title="Tomar Foto"><i class="fas fa-camera"></i></a>
+                            <a href="http://conserje-cb884.appspot.com/img" id="save-photo" download="visit.png" title="Guardar Foto" class="disabled"><i class="far fa-check-circle"></i></a>
+                        </div>
+                        <canvas></canvas>
+                    </div>
                     <br>
                     <input type="button" id="registerVisit" onclick="newVisit()" value="Registrar Visita">
                 </form>
-
             </div>
         </div>
     </div>
-
-
-
-
-
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -100,6 +101,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
     <script src="js/visit-register.js"></script>
+    <script src="js/photo.js"></script>
 </body>
 
 </html>
