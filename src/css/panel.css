@@ -1,0 +1,27 @@
+#registro{
+    padding-top: 2%;
+    text-align: center;
+    color: #47525E;
+}
+#icono{
+    color: #E4BB59;
+}
+#linksPanel{
+    padding-top: 10%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#links{
+    padding-top: 2%;
+}
+a{
+    color: #47525E;
+    font-weight: bold;
+    font-size: 22px;
+}
+#parrafo{
+    padding-top: 1%;
+    width: 70%;
+    margin-left: 15%;
+}

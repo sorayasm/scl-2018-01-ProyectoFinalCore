@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/panel.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
 
@@ -48,30 +48,55 @@
             </div>
         </div>        
     </header>
-    <div class="container">
+    <section class="container">
         <div class="row">
-            <div class="col">
-                <ul>
-                    <li>
-                        <a href="visit-list.html">Lista de visitas</a>
-                    </li>
-                    <li>
-                        <a href="community-list.html">Lista de Residentes</a>
-                    </li>
-                    <li>
-                        <a href="visit-register.html">Registrar una visita</a>
-                    </li>
-                    <li>
-                        <a href="#">Chat Administrativo</a>
-                    </li>
-                </ul>
-
-
-                <button onclick="window.logoutWithFirebase()"> Desconectar</button>
-
+            <div class="col-12 col-md-12 col-lg-12">
+                <h2 id="registro">Registro de Administradores</h2>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="linksPanel">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-4">
+                    <i id="icono" class="fas fa-user-plus fa-9x"></i>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <i id="icono" class="fas fa-user-check fa-9x"></i>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <i id="icono" class="fas fa-user-tag fa-9x"></i>
+                </div>  
+            </div>
+            <div class="row">
+                <div id="links" class="col-12 col-md-4 col-lg-4">
+                    <a href="visit-register.html">Registrar Visita</a>
+                </div>
+                <div id="links" class="col-12 col-md-4 col-lg-4">
+                    <a href="visit-list.html">Lista Visitas</a>
+                </div>
+                <div id="links" class="col-12 col-md-4 col-lg-4">
+                    <a href="community-list.html">Lista Comunidad</a>
+                </div>  
+            </div>
+            <div class="row">
+                <div id="divParrafo" class="col-12 col-md-4 col-lg-4">
+                    <p id="parrafo">Puedes registrar una visita desde tu pantalla, 
+                    para así ayudar a las personas que no lo pueden hacer</p>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <p id="parrafo">Acá encontrarás un listado actualizado de las 
+                    personas que han ingresado al coworks</p>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <p id="parrafo">Encontrarás el listado de las personas que se 
+                    encuentran constantemente en nuestro espacio de cowork</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+    
+
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase
