@@ -67,21 +67,17 @@
                         <a href="#" id="start-camera" class="visible">Haz click para tomar una foto</a>
                         <video id="camera-stream"></video>
                         <img id="snap">
-
                         <p id="error-message"></p>
-
                         <div class="controls">
                             <a href="#" id="delete-photo" title="Borrar Foto" class="disabled"><i class="far fa-trash-alt"></i></a>
                             <a href="#" id="take-photo" title="Tomar Foto"><i class="fas fa-camera"></i></a>
                             <a href="http://conserje-cb884.appspot.com/img" id="save-photo" download="visit.png" title="Guardar Foto" class="disabled"><i class="far fa-check-circle"></i></a>
                         </div>
                         <canvas></canvas>
-
                     </div>
                     <br>
                     <input type="button" id="registerVisit" onclick="newVisit()" value="Registrar Visita">
                 </form>
-
             </div>
         </div>
     </div>
@@ -98,9 +94,12 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
     <script src="js/visit-register.js"></script>
     <script src="js/photo.js"></script>
 </body>

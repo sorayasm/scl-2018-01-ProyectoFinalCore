@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+}
+#logo{
+    padding-top: 3%;
+    width: 15%;
+}
+#login{
+    padding-top: 3%;
+    color: #E4BB59;
+}
+#email{
+    width: 35%;
+    padding: 2px 2px;
+}
+#password{
+    margin-top: 8px;
+    width: 35%;
+    padding: 2px 2px;
+}
+#loginbutton{
+    background-color: #BBBE64;
+}
+#registrarCuenta{
+    padding-top: 1%;
+    font-size: 14px;
+}
+#registrate{
+    color: #E4BB59;
+    font-size: 18px;
+
+}
