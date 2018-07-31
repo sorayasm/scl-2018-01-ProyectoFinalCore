@@ -75,12 +75,10 @@
                     <option id="480" name="select" value="8 horas" onclick="handleClick2(this);">8 horas</option>
                 </select>
             </div>
-            <div class="form-group " id="formNameResident">
-                <label for="resident-name">Busca el nombre de la persona que visitas:</label>
-                <select name="contenido" id=""></select>
-            </div>
-
-
+            <div class="nombreComunidad" id="formNameResident">
+                    <label id="label" for="resident-name">Busca el nombre de la persona que visitas:</label>
+                    <select onchange="resident.call(this, event)" id="communityselect" class="btn btn-secondary dropdown-toggle"></select>
+                </div>
             <div class="row " id="formCamera">
                 <div class="col finalMessage">
                     <h2>Si ya terminaste tu registro, dale al botón "Registrar Visita" y en los próximos minutos alguien vendrá a buscarte.</h2>
