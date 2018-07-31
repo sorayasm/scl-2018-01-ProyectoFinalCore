@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/community-register.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
 <body>
@@ -49,32 +49,40 @@
     </header>
     <div class="container">
         <div class="row">
-            <form class="col">
-                <p>Registro de Comunidad</p>
-                <br>
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="residentName" aria-placeholder="Ingresa tu nombre">
-                <br>
-                <label for="dni">Ingresa tu RUT o DNI sin puntos ni guiones:</label>
-                <input type="text" id="residentDNI" aria-placeholder="Ingresa tu RUT">
-                <br>
-                <label for="company">Empresa o organización:</label>
-                <input type="text" id="residentCompany" aria-placeholder="Escribe de qué organización vienes">
-                <br>
-                <label for="position">Cargo:</label>
-                <input type="text" id="residentPosition" aria-placeholder="Escribe tu cargo">
-                <br>
-                <label for="mail">Correo:</label>
-                <input type="mail" id="residentMail" aria-placeholder="Escribe tu correo">
-                <br>
-                <label for="phone">Teléfono:</label>
-                <input type="number" id="residentPhone" aria-placeholder="Escribe tu teléfono">
-                <br>
-                <input type="button" id="registerResident" onclick="newResident()" value="Registrar persona de la Comunidad">
-            </form>
-
-
-            <button onclick="window.logoutWithFirebase()"> Desconectar</button>
+            <div class="col-12 col-md-12 col-lg-12">
+                <h2 id="registro">Registro de Comunidad</h2>
+                <form class="registrarComunidad">
+                    <div class="nombreResidente">
+                        <label id="label" for="name">Nombre Completo</label>
+                        <input type="text" id="residentName" aria-placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="rutResidente">
+                        <label id="label" for="dni">Ingresa tu RUT o DNI sin puntos ni guiones</label>
+                        <input type="text" id="residentDNI" aria-placeholder="Ingresa tu RUT">
+                    </div>
+                    <div class="empresaResidente">
+                        <label id="label" for="company">Empresa o organización</label>
+                        <input type="text" id="residentCompany" aria-placeholder="Escribe de qué organización vienes">
+                    </div>
+                    <div class="cargoResidente">
+                        <label id="label" for="position">Cargo</label>
+                        <input type="text" id="residentPosition" aria-placeholder="Escribe tu cargo">
+                    </div>
+                    <div class="emailResidente">
+                        <label id="label" for="mail">Correo</label>
+                        <input type="mail" id="residentMail" aria-placeholder="Escribe tu correo">
+                    </div>
+                    <div class="telefonoResidente">
+                        <label id="label" for="phone">Teléfono</label>
+                        <input type="number" id="residentPhone" aria-placeholder="Escribe tu teléfono">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div id="boton" class="col-12 col-md-12 col-lg-12">
+                <input type="button" id="registerResident" class="btn btn-outline-light text-white" onclick="newResident()" value="REGISTRAR COMUNIDAD">
+            </div>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/photo.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
-
 <body>
     <header>
         <div class="container">
@@ -105,36 +104,34 @@
                     <div class="nombreComunidad">
                         <label id="label" for="resident-name">Busca el nombre de la persona que visitas:</label>
                         <select onchange="resident.call(this, event)" id="communityselect" class="btn btn-secondary dropdown-toggle"></select>
-                        <br>
-
+                    </div>
                 </form>
-                </div>
-            </div>
-            <div class="row">
-                <div id="boton" class="col-12 col-md-12 col-lg-12">
-                    <input type="button" id="registerVisit" class="btn btn-outline-light text-white" onclick="newVisit(); sendMail();" value="REGISTRAR VISITA">
-                </div>
             </div>
         </div>
-        <footer id="espacioVacio"></footer>
-        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyBg86a7vgvhuyVJCVU9PSmJy2p49ZExsCk",
-                authDomain: "conserje-cb884.firebaseapp.com",
-                databaseURL: "https://conserje-cb884.firebaseio.com",
-                projectId: "conserje-cb884",
-                storageBucket: "conserje-cb884.appspot.com",
-                messagingSenderId: "223012013908"
-            };
-            firebase.initializeApp(config);
-        </script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-        <script src="js/smtp.js"></script>
-        <script src="js/visit-register.js"></script>
+        <div class="row">
+            <div id="boton" class="col-12 col-md-12 col-lg-12">
+                <input type="button" id="registerVisit" class="btn btn-outline-light text-white" onclick="newVisit(); sendMail();" value="REGISTRAR VISITA">
+            </div>
+        </div>   
+    </div>
+    <footer id="espacioVacio"></footer>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBg86a7vgvhuyVJCVU9PSmJy2p49ZExsCk",
+            authDomain: "conserje-cb884.firebaseapp.com",
+            databaseURL: "https://conserje-cb884.firebaseio.com",
+            projectId: "conserje-cb884",
+            storageBucket: "conserje-cb884.appspot.com",
+            messagingSenderId: "223012013908"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/visit-register.js"></script>
 </body>
 
 </html>
