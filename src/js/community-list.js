@@ -16,9 +16,9 @@ function gotData(data) {
         const position = community[k].position;
         //console.log(names, dni, enterTime, motive, patente, time, mail)
         const appendingTo = document.getElementById("residentlist");
-        const li = document.createElement("li")
-        li.innerHTML = names + " " + dni + " " + company + " " + mail + " " + phone + " " + position;
-        appendingTo.appendChild(li);
+        const div = document.createElement("div")
+        div.innerHTML = names + " " + dni + " " + company + " " + mail + " " + phone + " " + position;
+        appendingTo.appendChild(div);
     }
 
 }
