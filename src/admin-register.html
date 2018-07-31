@@ -6,41 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Queltehue - Registro de Administradores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/admin-register.css" />
 </head>
+
 <body>
-    <div class="container">
+    <header class="container">
         <div class="row">
-            <form class="col">
-                <p>Registro de Administradores</p>
-                <br>
-                <label for="admin-name">Nombre Completo:</label>
-                <input type="text" id="adminName" placeholder="Nombre completo*" required>
-                <br>
-                <label for="admin-email">Correo:</label>
-                <input type="email" id="adminMail" placeholder="Correo electrónico*" required>
-                <br>
-                <label for="admin-phone">Telefono:</label>
-                <input type="text" id="adminPhone" placeholder="Telefono*" required>
-                <br>
-                <label for="admin-company">Empresa:</label>
-                <input type="text" id="adminCompany" placeholder="Empresa*" required>
-                <br>
-                <label for="pass">Ingresa una contraseña:</label>
-                <input type="password" id="adminPassword" aria-placeholder="Ingresa una clave" required>
-                <br>
-                <label for="key">Clave de seguridad:</label>
-                <input type="password" id="key" aria-placeholder="Ingresa tu clave de seguridad" required>
-                <br>
-                <input type="button" id="registerbutton" onclick="adminRegister()" value="Registrar Administrador">
-                <p>¿Ya tienes cuenta? <a href="index.html">Inicia Sesión</a>
-            </form>
+            <div class="col-3 col-md-3 col-lg-4 navBar">
+                <div class="navBar">
+                    <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-white bg-white text-dark">
+
+                        <a class="navbar-brand" href="#">
+                            <img id="logoCompleto" src="./img/logo01_onecolor_full.png" alt="logoLargo">
+                        </a>
+                </div>
+            </div>
+
+            <div class="col-9 col-md-9 col-lg-8">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link h4" href="#">Visitante</a>
+                        <a class="nav-item nav-link h4" href="#">Administrador</a>
+                        <a class="nav-item nav-link h4" href="#">Comunidad</a>
+                        <a class="nav-item nav-link h4" href="#">Disabled</a>
+                        <a class="nav-item nav-link h4" href="#">
+                            <i class="fas fa-sign-in-alt fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
+        </nav>
+        </div>
+
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+
+                <h2 id="registro">Registro de Administradores</h2>
+                <div class="form-group row">
+                    <label id="admin-name" for="admin-name">Nombre Completo</label>
+                </div>
+                <div class="form-group row">
+                    <input type="text" id="adminName" class="form-control" placeholder="Nombre completo*" required>
+                </div>
+                <div class="form-group row">
+                    <label for="admin-email">Correo</label>
+                </div>
+                <div class="form-group row">
+                    <input type="email" id="adminMail" class="form-control" placeholder="Correo electrónico*" required aria-describedby="passwordHelpBlock">
+                </div>
+                <div class="form-group row">
+                    <label for="admin-phone">Telefono</label>
+                </div>
+                <div class="form-group row">
+                    <input type="text" id="adminPhone" class="form-control" placeholder="Telefono*" required>
+                </div>
+                <div class="form-group row">
+                    <label for="admin-company">Empresa</label>
+                </div>
+                <div class="form-group row">
+                    <input type="text" id="adminCompany" class="form-control" placeholder="Empresa*" required>
+                </div>
+                <div class="form-group row">
+                    <label for="pass">Ingresa una contraseña</label>
+                </div>
+                <div class="form-group row">
+                    <input type="password" id="adminPassword" class="form-control" aria-placeholder="Ingresa una clave" required>
+                </div>
+                <div class="form-group row">
+                    <label for="key">Clave de seguridad</label>
+                </div>
+                <div class="form-group row">
+                    <input type="password" id="key" class="form-control" aria-placeholder="Ingresa tu clave de seguridad" required>
+                </div>
+                <input type="button" id="registerbutton" onclick="adminRegister()" value="Registrar Administrador">
+                <p>¿Ya tienes cuenta?
+                    <a href="index.html">Inicia Sesión</a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase
