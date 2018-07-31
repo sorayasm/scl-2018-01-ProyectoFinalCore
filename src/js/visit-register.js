@@ -84,7 +84,7 @@ function resident(event) {
 // enviar mail
 function sendMail(vresident) {
     Email.send("queltehue.info@gmail.com",
-        "vresident",
+        vresident,
         "This is a subject",
         "this is the body",
         "smtp.mandrillapp.com",
