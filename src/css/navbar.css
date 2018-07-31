@@ -20,11 +20,7 @@ body{
     flex-direction: inherit;
     
 }
-#registro{
-    text-align: center;
-    color: #47525E;
 
-}
 .navbar-brand {
     display: inline-table;
     padding: 3px;

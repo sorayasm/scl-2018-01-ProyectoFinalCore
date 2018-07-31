@@ -1,0 +1,50 @@
+#registro{
+    padding-top: 2%;
+    text-align: center;
+    color: #47525E;
+}
+#icono{
+    display: block;
+    color: #E4BB59;
+    padding-bottom: 4%;
+}
+#linksPanel{
+    padding-top: 6%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: #47525E;
+    font-weight: bold;
+    font-size: 22px;
+}
+#parrafo{
+    padding-top: 1%;
+    width: 70%;
+    margin-left: 15%;
+}
+#registVisita{
+    padding-top: 2%;
+}
+#listVisita{
+    padding-top: 2%;
+}
+#listComunidad{
+    padding-top: 2%;
+}
+
+@media (max-width: 720px){
+    .fa-9x {
+        font-size: 5em;
+    }
+    a{
+        font-size: 16px;
+    }
+    #listVisita{
+        padding-top: 4%;
+    }
+    #listComunidad{
+        padding-top: 4%;
+    }
+}
