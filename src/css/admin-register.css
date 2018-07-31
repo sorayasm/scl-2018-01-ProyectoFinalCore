@@ -1,0 +1,24 @@
+header{
+    background-color: white;
+}
+.navBar{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.navbar-nav{
+    justify-content: center;
+}
+#logoCompleto{
+    width: 35%;
+}
+body{
+    background-color: #EFF0EC;
+}
+.navbar-nav{
+    font-size: 14px;
+}
+#registro{
+    text-align: center;
+    color: #47525E;
+}
