@@ -6,19 +6,60 @@ header{
     display: flex;
     align-items: center;
 }
-.navbar-nav{
-    justify-content: center;
+@media (min-width: 720px) {
+    #logoCompleto{
+        width: 70%;
+    }
 }
-#logoCompleto{
-    width: 35%;
+@media (max-width: 720px) {
+    #logoCompleto{
+        width: 40%;
+    }
 }
+
 body{
     background-color: #EFF0EC;
+    color: #47525E;
 }
 .navbar-nav{
     font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: inherit;
+    
 }
 #registro{
     text-align: center;
     color: #47525E;
+    padding-top: 1%;
+}
+.navbar-brand {
+    display: inline-table;
+    padding: 3px;
+    height: 0;
+}
+.navbar{
+    justify-content: center;
+    align-items: center;
+    display: contents;
+}
+.navbar-nav .nav-link {
+    padding-right: 3%;
+    padding-left: 0;
+}
+#adminName{
+    width: 100%;
+}
+#admin-name{
+    padding-top: 1%;
+}
+#adminName{
+    
+    width: 40%;
+}
+#adminMail{
+    width: 40%;
+}
+.form-group {
+    margin-bottom: 0;
 }
