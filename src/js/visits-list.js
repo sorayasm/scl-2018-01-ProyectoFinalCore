@@ -10,7 +10,7 @@ function gotData(data) {
         const k = keys[i];
         const names = visitas[k].name;
         const dni = visitas[k].DNI;
-        const enterTime = visitas[k].mail;
+        const enterTime = visitas[k].enterTime;
         const motive = visitas[k].motive;
         const patente = visitas[k].patente;
         const mail = visitas[k].mail;
