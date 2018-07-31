@@ -5,6 +5,18 @@ h1{
     font-family: 'Lato', sans-serif;
     color: #47525E;
     line-height: 34px;
-    width: 270px;
     text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.buttonRegister{
+  background-color: #969FAA;
+  color: #EFF0EC;
+  border-radius: 8px;
+  width: 288px;
+  height: 50px;
+}
+.buttonRegisterCol{
+    display: flex;
+    justify-content: center;
 }
