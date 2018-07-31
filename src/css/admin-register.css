@@ -6,16 +6,12 @@ header{
     display: flex;
     align-items: center;
 }
-@media (min-width: 720px) {
-    #logoCompleto{
-        width: 70%;
-    }
+
+#logoCompleto{
+    width: 80%;
 }
-@media (max-width: 720px) {
-    #logoCompleto{
-        width: 40%;
-    }
-}
+
+
 
 body{
     background-color: #EFF0EC;
