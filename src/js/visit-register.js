@@ -1,13 +1,41 @@
 // Select residentes
-window.onload = () => {
-    firebase.database().ref(`residentes/${newResident.key}`)
-        .on("child_added", (newResident) => {
-            contenido.innerHTML = `
-            <option name="select" value="${newResident.key.company} ${newResident.key.name}">${newResident.key.company} ${newResident.key.name},/option>` +
-                contenido.innerHTML;
-        });
 
+window.onload = () => {
+    database = firebase.database()
+    const ref = database.ref("residentes")
+    ref.on("value", gotData, errData)
 };
+
+// Funciones para select
+function gotData(data) {
+    community = data.val();
+    const keys = Object.keys(community);
+    //console.log(keys);
+    for (i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        const names = community[k].name;
+        const mail = community[k].mail;
+        const company = community[k].company;
+        //console.log(names, mail, company);
+        const appendingTo = document.getElementById("communityselect");
+        const select = document.createElement("option")
+        select.text = company + " - " + names;
+        select.value = mail;
+        appendingTo.appendChild(select);
+    }
+
+}
+
+
+function errData(err) {
+    console.log("Error!" + err);
+
+}
+
+let vtime = "Reunión o Evento";
+let vmotive = "15 minutos";
+let vresident = "laboratoria@laboratoria.cl"
+
 
 // Registrar visitas
 function newVisit() {
@@ -24,25 +52,31 @@ function newVisit() {
     newStoreRef.set({
         name: vname,
         DNI: vdni,
-        //company: vcompany,
         mail: vmail,
-        motive: vmotive.value, // resolver tema de valor por defecto
-        visitTime: vtime.value, // resolver tema de valor por defecto
+        motive: JSON.stringify(vmotive), // resolver tema de valor por defecto
+        visitTime: JSON.stringify(vtime), // resolver tema de valor por defecto
         enterTime: timestamp,
         patente: vpatente,
+        visitTo: vresident,
         //photo: vphoto
     });
     console.log("registro exitoso")
 }
 
 //Select Motivo
-function handleClick(select) {
-    vmotive == select;
+function motive(event) {
+    vmotive = this.options[this.selectedIndex].value;
     console.log(vmotive)
 }
 
 // Select time
-function handleClick2(select) {
-    vtime = select;
+function time(event) {
+    vtime = this.options[this.selectedIndex].value;
     console.log(vtime)
+}
+
+// select residente
+function resident(event) {
+    vresident = this.options[this.selectedIndex].value;
+    console.log(vresident)
 }

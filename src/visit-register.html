@@ -68,36 +68,36 @@
                     <label for="mail">Correo:</label>
                     <input type="mail" id="visitMail" aria-placeholder="Escribe tu correo">
                     <br>
-                    <label for="patente">Si vienes en vehiculo, escribe la patente:</label>
+                    <label for="patente">Si vienes en vehículo, escribe la patente:</label>
                     <input type="text" id="visitPatente" aria-placeholder="Escribe  la patente">
                     <br>
                     <label for="motive">Selecciona el motivo de tu visita:</label>
-                    <select>
-                        <option id="meeting" name="select" value="Reunión o Evento" onclick="handleClick(this);">Reunión o Evento</option>
-                        <option id="visit" name="select" value="Visita Personal" onclick="handleClick(this);">Visita Personal</option>
-                        <option id="delivery" name="select" value="Entrega" onclick="handleClick(this);">Entrega</option>
-                        <option id="info" name="select" value="Información sobre el espacio de CoWork" onclick="handleClick(this);">Información sobre el espacio de CoWork</option>
-                        <option id="other" name="select" value="Otro" onclick="handleClick(this);">Otro</option>
+                    <select onchange="motive.call(this, event)">
+                        <option id="meeting" name="select" value="Reunión o Evento" >Reunión o Evento</option>
+                        <option id="visit" name="select" value="Visita Personal" >Visita Personal</option>
+                        <option id="delivery" name="select" value="Entrega" >Entrega</option>
+                        <option id="info" name="select" value="Información sobre el espacio de CoWork">Información sobre el espacio de CoWork</option>
+                        <option id="other" name="select" value="Otro">Otro</option>
                         </select>
                     <br>
-                    <label for="visitTime">Selecciona la duración de tu visita:</label>
-                    <select>
-                        <option id="15" name="select" value="15 minutos" onclick="handleClick2(this);">15 minutos</option>
-                        <option id="30" name="select" value="30 minutos" onclick="handleClick2(this);">30 minutos</option>
-                        <option id="45" name="select" value="45 minutos" onclick="handleClick2(this);">45 minutos</option>
-                        <option id="60" name="select" value="1 hora" onclick="handleClick2(this);">1 hora</option>
-                        <option id="60" name="select" value="Hora y media" onclick="handleClick2(this);">Hora y media</option>
-                        <option id="120" name="select" value="2 horas" onclick="handleClick2(this);">2 horas</option>
-                        <option id="180" name="select" value="3 horas" onclick="handleClick2(this);">3 horas</option>
-                        <option id="240" name="select" value="4 horas" onclick="handleClick2(this);">4 horas</option>
-                        <option id="300" name="select" value="5 horas" onclick="handleClick2(this);">5 horas</option>
-                        <option id="360" name="select" value="6 horas" onclick="handleClick2(this);">6 horas</option>
-                        <option id="420" name="select" value="7 horas" onclick="handleClick2(this);">7 horas</option>
-                        <option id="480" name="select" value="8 horas" onclick="handleClick2(this);">8 horas</option>
+                    <label for="time">Selecciona la duración de tu visita:</label>
+                    <select onchange="time.call(this, event)">
+                        <option id="15" name="select2" value="15 minutos" >15 minutos</option>
+                        <option id="30" name="select2" value="30 minutos" >30 minutos</option>
+                        <option id="45" name="select2" value="45 minutos" >45 minutos</option>
+                        <option id="60" name="select2" value="1 hora" >1 hora</option>
+                        <option id="60" name="select2" value="Hora y media">Hora y media</option>
+                        <option id="120" name="select2" value="2 horas" >2 horas</option>
+                        <option id="180" name="select2" value="3 horas" >3 horas</option>
+                        <option id="240" name="select2" value="4 horas" >4 horas</option>
+                        <option id="300" name="select2" value="5 horas" >5 horas</option>
+                        <option id="360" name="select2" value="6 horas" >6 horas</option>
+                        <option id="420" name="select2" value="7 horas" >7 horas</option>
+                        <option id="480" name="select2" value="8 horas" >8 horas</option>
                     </select>
                     <br>
                     <label for="resident-name">Busca el nombre de la persona que visitas:</label>
-                    <select name="contenido" id=""></select>
+                    <select onchange="resident.call(this, event)" id="communityselect"></select>
                     <br>
                     <div class="app">
                         <a href="#" id="start-camera" class="visible">Haz click para tomar una foto</a>
@@ -130,12 +130,9 @@
         };
         firebase.initializeApp(config);
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="js/visit-register.js"></script>
     <script src="js/photo.js"></script>
 </body>

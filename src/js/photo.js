@@ -21,7 +21,7 @@ if (!navigator.getMedia) {
             //Respuesta exitosa, crear url para imagen
             video.src = window.URL.createObjectURL(stream);
             // activar el video
-            video.play();
+            //video.play();
             video.onplay = function() {
                 showVideo();
             };

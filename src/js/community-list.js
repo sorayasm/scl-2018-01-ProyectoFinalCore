@@ -1,15 +1,29 @@
 firebase.initializeApp(config);
+firebase.database().ref("residentes").on("value", gotData, errData)
 
-window.onload = () => {
+// Funciones para lista
+function gotData(data) {
+    community = data.val();
+    const keys = Object.keys(community);
+    //console.log(keys);
+    for (i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        const names = community[k].name;
+        const dni = community[k].DNI;
+        const company = community[k].company;
+        const mail = community[k].mail;
+        const phone = community[k].phone;
+        const position = community[k].position;
+        //console.log(names, dni, enterTime, motive, patente, time, mail)
+        const appendingTo = document.getElementById("residentlist");
+        const li = document.createElement("li")
+        li.innerHTML = names + " " + dni + " " + company + " " + mail + " " + phone + " " + position;
+        appendingTo.appendChild(li);
+    }
 
-    contenedor.innerHTML = "";
-    firebase.database().ref("residentes")
+}
 
-    .on('child_added', (residentes) => {
-        residentes.innerHTML += `
-             <div class="">
-                <p>${residentes.val().name}</p>
-            </div> 
-            `;
-    });
+function errData(err) {
+    console.log("Error!" + err);
+
 }
