@@ -6,38 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Queltehue - Panel de Administración</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/panel.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
 
 <body>
-    <div class="container">
+    <header >
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-md-3 col-lg-4 navBar">
+                    <div class="navBar">
+                        <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-white bg-white text-dark"></nav>
+                            <a class="navbar-brand" href="#">
+                                <img id="logoCompleto" src="./img/logo01_onecolor_full.png" alt="logoLargo">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-8 col-md-8 col-lg-7">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link h4" href="visit-list.html">Visitante</a>
+                            <a class="nav-item nav-link h4" href="admin-list.html">Administrador</a>
+                            <a class="nav-item nav-link h4" href="community-list.html">Comunidad</a>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-1 col-md-1 col-lg-1">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link h4" href="#">
+                                <i id="exit" class="fas fa-sign-in-alt fa-2x" onclick="logoutWithFirebase()" value="LOGOUT"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </header>
+    <section class="container">
         <div class="row">
-            <div class="col">
-                <ul>
-                    <li>
-                        <a href="visit-list.html">Lista de visitas</a>
-                    </li>
-                    <li>
-                        <a href="community-list.html">Lista de Residentes</a>
-                    </li>
-                    <li>
-                        <a href="visit-register.html">Registrar una visita</a>
-                    </li>
-                    <li>
-                        <a href="#">Chat Administrativo</a>
-                    </li>
-                </ul>
-
-
-                <button onclick="window.logoutWithFirebase()"> Desconectar</button>
-
+            <div class="col-12 col-md-12 col-lg-12">
+                <h2 id="registro">Registro de Administradores</h2>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="linksPanel">
+        <div class="container">
+            <div class="row">
+                <div id="registVisita" class="col-12 col-md-4 col-lg-4">
+                    <i id="icono" class="fas fa-user-plus fa-9x"></i>
+                    <a id="links" href="visit-register.html">Registrar Visita</a>
+                    <p id="parrafo">Puedes registrar una visita desde tu pantalla, 
+                            para así ayudar a las personas que no lo pueden hacer</p>
+                </div>
+                <div id="listVisita" class="col-12 col-md-4 col-lg-4">
+                    <i id="icono"  class="fas fa-user-check fa-9x fa-9x"></i>
+                    <a id="links" href="visit-list.html">Lista Visitas</a>
+                    <p id="parrafo">Acá encontrarás un listado actualizado de las 
+                            personas que han ingresado al coworks</p>
+                </div>
+                <div id="listComunidad" class="col-12 col-md-4 col-lg-4">
+                    <i id="icono" class="fas fa-user-tag fa-9x"></i>
+                    <a id="links" href="community-list.html">Lista Comunidad</a>
+                    <p id="parrafo">Encontrarás el listado de las personas que se 
+                            encuentran constantemente en nuestro espacio de cowork</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+    
+
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase

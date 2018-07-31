@@ -6,135 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Queltehue - Registro de Administradores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="css/admin-register.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
+
 </head>
 
 <body>
-    <header class="container">
-        <div class="row">
-            <div class="col-3 col-md-3 col-lg-4 navBar">
-                <div class="navBar">
-                    <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-white bg-white text-dark">
-
-                        <a class="navbar-brand" href="#">
+    <header >
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-md-3 col-lg-4 navBar">
+                    <div class="navBar">
+                        <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-white bg-white text-dark"></nav>
+                        <a class="navbar-brand" href="panel.html">
                             <img id="logoCompleto" src="./img/logo01_onecolor_full.png" alt="logoLargo">
                         </a>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-8 col-md-8 col-lg-7">
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link h4" href="#">Visitante</a>
-                        <a class="nav-item nav-link h4 activado font-weight-bold" href="#">Administrador</a>
-                        <a class="nav-item nav-link h4" href="#">Comunidad</a>
+                <div class="col-8 col-md-8 col-lg-7">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link h4" href="visit-list.html">Visitante</a>
+                            <a class="nav-item nav-link h4 activado font-weight-bold" href="#">Administrador</a>
+                            <a class="nav-item nav-link h4" href="community-list.html">Comunidad</a>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-1 col-md-1 col-lg-1">
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link h4" href="#">
+                                <i id="exit" class="fas fa-sign-in-alt fa-2x" onclick="logoutWithFirebase()" value="LOGOUT"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-1 col-md-1 col-lg-1">
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link h4" href="#">
-                            <i id="exit" class="fas fa-sign-in-alt fa-2x" onclick="" value="LOGOUT"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </nav>
-        </div>
-
-        </div>
+        </div>        
     </header>
 
-    <section id="registroAdmin" class="container">
+    <section class="container">
         <div class="row">
             <div class="col">
                 <h2 id="registro">Registro de Administradores</h2>
+                <form class="registrarAdmin">
+                    <div class="nombreAdmin">
+                        <label id="label" for="admin-name">Nombre Completo</label>
+                        <input type="text" id="adminName" class="form-control" placeholder="Nombre completo*" required>
+                    </div>
+
+                    <div class="emailAdmin">
+                        <label id="label" for="admin-email">Correo</label>
+                        <input type="email" id="adminMail" class="form-control" placeholder="Correo electrónico*">
+                    </div>
+                
+                    <div class="telefonoAdmin">
+                        <label id="label" for="admin-phone">Teléfono</label>
+                        <input type="text" id="adminPhone" class="form-control" placeholder="Telefono*" required>
+                    </div>
+
+                    <div class="empresaAdmin">
+                        <label id="label" for="admin-company">Empresa</label>
+                        <input type="text" id="adminCompany" class="form-control" placeholder="Empresa*" required>
+                    </div>
+
+                    <div class="contraseñaAdmin">
+                        <label id="label" for="pass">Ingresa una contraseña</label>
+                        <input type="password" id="adminPassword" class="form-control" placeholder="Ingresa una contraseña mayor a 6 digitos" required>
+                    </div>
+
+                    <div class="claveAdmin">
+                        <label id="label" for="key">Clave de seguridad</label>
+                        <input type="password" id="key" class="form-control" placeholder="Ingresa tu clave de seguridad" required>
+                    </div>
+
+                    
+                </form>
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="form-group row">
-                    <label id="admin-name" for="admin-name">Nombre Completo</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-group row">
-                    <input type="text" id="adminName" class="form-control" placeholder="Nombre completo*" required>
-                </div>
+            <div id="botonRegistrar" class="col-12 col-md-12 col-lg-12">
+                <input type="button" class="btn btn-outline-light text-white" id="registerbutton" onclick="adminRegister()" value="REGISTRAR ADMINISTRADOR">
+                <p id="cuenta">¿Ya tienes cuenta?
+                    <a id="sesión" class="font-weight-bold" href="index.html">Inicia Sesión</a>
+                </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-        <form>
-
-
-
-            <div class="form-group row">
-                <label for="admin-email">Correo</label>
-            </div>
-            <div class="form-group row">
-                <input type="email" id="adminMail" class="form-control" placeholder="Correo electrónico*" required>
-            </div>
-
-            <div class="form-group row">
-                <label for="admin-phone">Telefono</label>
-            </div>
-            <div class="form-group row">
-                <input type="text" id="adminPhone" class="form-control" placeholder="Telefono*" required>
-            </div>
-
-            <div class="form-group row">
-                <label for="admin-company">Empresa</label>
-            </div>
-            <div class="form-group row">
-                <input type="text" id="adminCompany" class="form-control" placeholder="Empresa*" required>
-            </div>
-
-            <div class="form-group row">
-                <label for="pass">Ingresa una contraseña</label>
-            </div>
-            <div class="form-group row">
-                <input type="password" id="adminPassword" class="form-control" aria-placeholder="Ingresa una clave" required>
-            </div>
-
-            <div class="form-group row">
-                <label for="key">Clave de seguridad</label>
-            </div>
-            <div class="form-group row">
-                <input type="password" id="key" class="form-control" aria-placeholder="Ingresa tu clave de seguridad" required>
-            </div>
-
-            <input type="button" class="btn btn-outline-light text-white" id="registerbutton" onclick="adminRegister()" value="REGISTRAR ADMINISTRADOR">
-            <p id="cuenta">¿Ya tienes cuenta?
-                <a id="sesión" class="font-weight-bold" href="index.html">Inicia Sesión</a>
-            </p>
-        </form>
-
-
     </section>
 
 

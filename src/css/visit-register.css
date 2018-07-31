@@ -95,3 +95,59 @@ h2{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#registro{
+    text-align: center;
+    color: #47525E;
+}
+#label{
+    display: block;
+    margin-top: 11px;
+}
+#visitName{
+    width: 70%;
+}
+#visitDNI{
+    width: 70%;
+}
+#visitCompany{
+    width: 70%;
+}
+#visitMail{
+    width: 70%;
+}
+#visitPatente{
+    width: 70%;
+}
+#selectMotive{
+    width: 70%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+#selectTiempo{
+    width: 70%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+#communityselect{
+    width: 70%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+#registerVisit{
+    margin-top: 2%;
+    background-color: #BBBE64;
+}
+#boton{
+    text-align: center;
+}
+#espacioVacio{
+    padding: 3%;
+}
+@media (min-width: 720px){
+    #visit-register{
+        padding-left: 23%;
+    }
+}

@@ -4,15 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Queltehue - Registro de residentes</title>
+    <title>Queltehue -Lista de administradores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/community-register.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
+
 </head>
+
 <body>
     <header >
         <div class="container">
@@ -30,8 +32,8 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-item nav-link h4" href="visit-list.html">Visitante</a>
-                            <a class="nav-item nav-link h4" href="admin-list.html">Administrador</a>
-                            <a class="nav-item nav-link h4 activado font-weight-bold" href="#">Comunidad</a>
+                            <a class="nav-item nav-link h4 activado font-weight-bold" href="">Administrador</a>
+                            <a class="nav-item nav-link h4" href="community-list.html">Comunidad</a>
                         </div>
                     </div>   
                 </div>
@@ -49,39 +51,14 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-12">
-                <h2 id="registro">Registro de Comunidad</h2>
-                <form class="registrarComunidad">
-                    <div class="nombreResidente">
-                        <label id="label" for="name">Nombre Completo</label>
-                        <input type="text" id="residentName" aria-placeholder="Ingresa tu nombre">
-                    </div>
-                    <div class="rutResidente">
-                        <label id="label" for="dni">Ingresa tu RUT o DNI sin puntos ni guiones</label>
-                        <input type="text" id="residentDNI" aria-placeholder="Ingresa tu RUT">
-                    </div>
-                    <div class="empresaResidente">
-                        <label id="label" for="company">Empresa o organización</label>
-                        <input type="text" id="residentCompany" aria-placeholder="Escribe de qué organización vienes">
-                    </div>
-                    <div class="cargoResidente">
-                        <label id="label" for="position">Cargo</label>
-                        <input type="text" id="residentPosition" aria-placeholder="Escribe tu cargo">
-                    </div>
-                    <div class="emailResidente">
-                        <label id="label" for="mail">Correo</label>
-                        <input type="mail" id="residentMail" aria-placeholder="Escribe tu correo">
-                    </div>
-                    <div class="telefonoResidente">
-                        <label id="label" for="phone">Teléfono</label>
-                        <input type="number" id="residentPhone" aria-placeholder="Escribe tu teléfono">
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div id="boton" class="col-12 col-md-12 col-lg-12">
-                <input type="button" id="registerResident" class="btn btn-outline-light text-white" onclick="newResident()" value="REGISTRAR COMUNIDAD">
+            <div class="col">
+                <p>Aquí va la lista de administradores
+                    <ul id="adminlist">
+
+                    </ul>
+                </p>
+
+
             </div>
         </div>
     </div>
@@ -102,13 +79,10 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-    <script src="js/community-register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/admin-list.js"></script>
     <script src="js/main.js"></script>
 </body>
 

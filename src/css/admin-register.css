@@ -1,78 +1,24 @@
-header{
-    background-color: white;
-}
-.navBar{
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-#logoCompleto{
-    width: 80%;
-}
-body{
-    background-color: #EFF0EC;
-    color: #47525E;
-}
-.navbar-nav{
-    font-size: 14px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: inherit;
-    
-}
-#registro{
-    text-align: center;
-    color: #47525E;
-
-}
-.navbar-brand {
-    display: inline-table;
-    padding: 3px;
-    height: 0;
-}
-.navbar{
-    justify-content: center;
-    align-items: center;
-    display: contents;
-}
-.navbar-nav .nav-link {
-    padding-right: 3%;
-    padding-left: 0;
-}
-#registroAdmin{
-    text-align: center;
-    align-items: center;
-}
-.form-group {
-    margin-bottom: 0px;
-}
-form{
-    text-align: center;
-}
-#exit{
-    color: #E4BB59;
-}
-
 #adminName{
-    width: 50%;
+    width: 70%;
 }
 #adminMail{
-    width: 50%;
+    width: 70%;
 }
 #adminPhone{
-    width: 50%;
+    width: 70%;
 }
 #adminCompany{
-    width: 50%;
+    width: 70%;
 }
 #adminPassword{
-    width: 50%;
+    width: 70%;
 }
 #key{
-    width: 50%;
+    width: 70%;
 }
-label{
-    margin-top: 13px;
+#label{
+    display: block;
+    margin-top: 11px;
 }
 #registerbutton{
     margin-top: 2%;
@@ -84,6 +30,16 @@ label{
 #sesión{
     color: #E4BB59;
 }
-.activado{
-    color: #E4BB59;
+#botonRegistrar{
+    text-align: center;
 }
+#registro{
+    text-align: center;
+    color: #47525E;
+}
+@media (min-width: 720px){
+    .registrarAdmin{
+        padding-left: 23%;
+    }
+}
+
