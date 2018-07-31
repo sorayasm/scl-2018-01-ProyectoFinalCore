@@ -86,8 +86,8 @@ function sendMail(vresident) {
         vresident,
         "This is a subject",
         "this is the body",
-        "smtp.mandrillapp.com",
-        "Laboratoria.La",
-        "Yjbhl-WzBGJbqv5w5n-y9w");
+        "smtp.sendgrid.net",
+        "apikey",
+        "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");
 
 }
