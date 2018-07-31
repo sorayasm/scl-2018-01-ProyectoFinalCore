@@ -1,0 +1,39 @@
+#registro{
+    text-align: center;
+    color: #47525E;
+    padding-bottom: 2%;
+}
+#label{
+    display: block;
+    margin-top: 12px;
+}
+#residentName{
+    width: 70%;
+}
+#residentDNI{
+    width: 70%;
+}
+#residentCompany{
+    width: 70%;
+}
+#residentPosition{
+    width: 70%;
+}
+#residentMail{
+    width: 70%;
+}
+#residentPhone{
+    width: 70%;
+}
+#boton{
+    text-align: center;
+}
+#registerResident{
+    margin-top: 2%;
+    background-color: #BBBE64;
+}
+@media (min-width: 720px){
+    .registrarComunidad{
+        padding-left: 23%;
+    }
+}
