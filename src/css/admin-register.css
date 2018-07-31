@@ -1,23 +1,24 @@
 #adminName{
-    width: 50%;
+    width: 70%;
 }
 #adminMail{
-    width: 50%;
+    width: 70%;
 }
 #adminPhone{
-    width: 50%;
+    width: 70%;
 }
 #adminCompany{
-    width: 50%;
+    width: 70%;
 }
 #adminPassword{
-    width: 50%;
+    width: 70%;
 }
 #key{
-    width: 50%;
+    width: 70%;
 }
-label{
-    margin-top: 13px;
+#label{
+    display: block;
+    margin-top: 11px;
 }
 #registerbutton{
     margin-top: 2%;
@@ -29,12 +30,16 @@ label{
 #sesión{
     color: #E4BB59;
 }
-
 #botonRegistrar{
     text-align: center;
 }
 #registro{
     text-align: center;
     color: #47525E;
+}
+@media (min-width: 720px){
+    .registrarAdmin{
+        padding-left: 23%;
+    }
 }
 

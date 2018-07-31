@@ -104,18 +104,15 @@
                     <div class="nombreComunidad">
                         <label id="label" for="resident-name">Busca el nombre de la persona que visitas:</label>
                         <select onchange="resident.call(this, event)" id="communityselect" class="btn btn-secondary dropdown-toggle"></select>
-                    <br>
-                    <input type="button" id="registerVisit" onclick="newVisit(); sendMail();" value="Registrar Visita">
-
+                    </div>
                 </form>
-                </div>
-            </div>
-            <div class="row">
-                <div id="boton" class="col-12 col-md-12 col-lg-12">
-                    <input type="button" id="registerVisit" class="btn btn-outline-light text-white" onclick="newVisit(); sendMail();" value="REGISTRAR VISITA">
-                </div>
             </div>
         </div>
+        <div class="row">
+            <div id="boton" class="col-12 col-md-12 col-lg-12">
+                <input type="button" id="registerVisit" class="btn btn-outline-light text-white" onclick="newVisit(); sendMail();" value="REGISTRAR VISITA">
+            </div>
+        </div>   
     </div>
     <footer id="espacioVacio"></footer>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>

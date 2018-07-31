@@ -50,50 +50,38 @@
         </div>        
     </header>
 
-    <section id= "registroAdmin" class="container">
+    <section class="container">
         <div class="row">
-            <div id="form" class="col-12 col-md-12 col-lg-12">
+            <div class="col-12 col-md-12 col-lg-12">
                 <h2 id="registro">Registro de Administradores</h2>
-                <form>
-                    <div class="form-group">
-                        <label id="admin-name" for="admin-name">Nombre Completo</label>
-                    </div>
-                    <div class="form-group">
+                <form class="registrarAdmin">
+                    <div class="nombreAdmin">
+                        <label id="label" for="admin-name">Nombre Completo</label>
                         <input type="text" id="adminName" class="form-control" placeholder="Nombre completo*" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="admin-email">Correo</label>
-                    </div>
-                    <div class="form-group">
+                    <div class="emailAdmin">
+                        <label id="label" for="admin-email">Correo</label>
                         <input type="email" id="adminMail" class="form-control" placeholder="Correo electrónico*">
                     </div>
                 
-                    <div class="form-group">
-                        <label for="admin-phone">Teléfono</label>
-                    </div>
-                    <div class="form-group">
+                    <div class="telefonoAdmin">
+                        <label id="label" for="admin-phone">Teléfono</label>
                         <input type="text" id="adminPhone" class="form-control" placeholder="Telefono*" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="admin-company">Empresa</label>
-                    </div>
-                    <div class="form-group">
+                    <div class="empresaAdmin">
+                        <label id="label" for="admin-company">Empresa</label>
                         <input type="text" id="adminCompany" class="form-control" placeholder="Empresa*" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="pass">Ingresa una contraseña</label>
-                    </div>
-                    <div class="form-group">
+                    <div class="contraseñaAdmin">
+                        <label id="label" for="pass">Ingresa una contraseña</label>
                         <input type="password" id="adminPassword" class="form-control" placeholder="Ingresa una contraseña mayor a 6 digitos" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="key">Clave de seguridad</label>
-                    </div>
-                    <div class="form-group">
+                    <div class="claveAdmin">
+                        <label id="label" for="key">Clave de seguridad</label>
                         <input type="password" id="key" class="form-control" placeholder="Ingresa tu clave de seguridad" required>
                     </div>
 
