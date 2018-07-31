@@ -17,15 +17,15 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <div class="container">
             <div class="row">
                 <div class="col-3 col-md-3 col-lg-4 navBar">
                     <div class="navBar">
                         <nav class="navbar navbar-expand-lg fixed-top navbar-white navbar-white bg-white text-dark"></nav>
-                            <a class="navbar-brand" href="panel.html">
-                                <img id="logoCompleto" src="./img/logo01_onecolor_full.png" alt="logoLargo">
-                            </a>
+                        <a class="navbar-brand" href="panel.html">
+                            <img id="logoCompleto" src="./img/logo01_onecolor_full.png" alt="logoLargo">
+                        </a>
                         </nav>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                             <a class="nav-item nav-link h4" href="admin-register.html">Administrador</a>
                             <a class="nav-item nav-link h4" href="community-list.html">Comunidad</a>
                         </div>
-                    </div>   
+                    </div>
                 </div>
                 <div class="col-1 col-md-1 col-lg-1">
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </header>
     <div class="container">
         <div class="row">
@@ -99,20 +99,7 @@
                     <label for="resident-name">Busca el nombre de la persona que visitas:</label>
                     <select onchange="resident.call(this, event)" id="communityselect"></select>
                     <br>
-                    <div class="app">
-                        <a href="#" id="start-camera" class="visible">Haz click para tomar una foto</a>
-                        <video id="camera-stream"></video>
-                        <img id="snap">
-                        <p id="error-message"></p>
-                        <div class="controls">
-                            <a href="#" id="delete-photo" title="Borrar Foto" class="disabled"><i class="far fa-trash-alt"></i></a>
-                            <a href="#" id="take-photo" title="Tomar Foto"><i class="fas fa-camera"></i></a>
-                            <a href="http://conserje-cb884.appspot.com/img" id="save-photo" download="visit.png" title="Guardar Foto" class="disabled"><i class="far fa-check-circle"></i></a>
-                        </div>
-                        <canvas></canvas>
-                    </div>
-                    <br>
-                    <input type="button" id="registerVisit" onclick="newVisit()" value="Registrar Visita">
+                    <input type="button" id="registerVisit" onclick="newVisit(); sendMail();" value="Registrar Visita">
                 </form>
             </div>
         </div>
@@ -134,7 +121,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script src="js/visit-register.js"></script>
-    <script src="js/photo.js"></script>
 </body>
 
 </html>

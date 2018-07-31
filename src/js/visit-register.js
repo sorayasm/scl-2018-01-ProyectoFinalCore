@@ -80,3 +80,9 @@ function resident(event) {
     vresident = this.options[this.selectedIndex].value;
     console.log(vresident)
 }
+
+// enviar mail
+function sendMail(vresident) {
+
+
+}
