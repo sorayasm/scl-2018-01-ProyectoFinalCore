@@ -1,13 +1,33 @@
 // Select residentes
-window.onload = () => {
-    firebase.database().ref(`residentes/${newResident.key}`)
-        .on("child_added", (newResident) => {
-            contenido.innerHTML = `
-            <option name="select" value="${newResident.key.company} ${newResident.key.name}">${newResident.key.company} ${newResident.key.name},/option>` +
-                contenido.innerHTML;
-        });
 
+window.onload = () => {
+    database = firebase.database()
+    const ref = database.ref("residentes")
+    ref.on("value", gotData, errData)
 };
+
+// Funciones para select
+function gotData(data) {
+    community = data.val();
+    const keys = Object.keys(community);
+    console.log(keys);
+    for (i = 0; i < keys.length; i++) {
+        const k = keys[i];
+        const names = community[k].name;
+        const mail = community[k].mail;
+        console.log(names, mail)
+    }
+
+}
+
+function errData(err) {
+    console.log("Error!" + err);
+
+}
+
+let vtime = "Reunión o Evento";
+let vmotive = "15 minutos";
+
 
 // Registrar visitas
 function newVisit() {
@@ -26,8 +46,8 @@ function newVisit() {
         DNI: vdni,
         //company: vcompany,
         mail: vmail,
-        motive: vmotive.value, // resolver tema de valor por defecto
-        visitTime: vtime.value, // resolver tema de valor por defecto
+        motive: JSON.stringify(vmotive), // resolver tema de valor por defecto
+        visitTime: JSON.stringify(vtime), // resolver tema de valor por defecto
         enterTime: timestamp,
         patente: vpatente,
         //photo: vphoto
@@ -36,13 +56,13 @@ function newVisit() {
 }
 
 //Select Motivo
-function handleClick(select) {
-    vmotive == select;
+function motive(event) {
+    vmotive = this.options[this.selectedIndex].value;
     console.log(vmotive)
 }
 
 // Select time
-function handleClick2(select) {
-    vtime = select;
+function time(event) {
+    vtime = this.options[this.selectedIndex].value;
     console.log(vtime)
 }
