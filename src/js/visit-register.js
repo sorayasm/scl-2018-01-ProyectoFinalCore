@@ -23,7 +23,6 @@ function gotData(data) {
         select.value = mail;
         appendingTo.appendChild(select);
     }
-
 }
 
 
@@ -53,8 +52,8 @@ function newVisit() {
         name: vname,
         DNI: vdni,
         mail: vmail,
-        motive: JSON.stringify(vmotive), // resolver tema de valor por defecto
-        visitTime: JSON.stringify(vtime), // resolver tema de valor por defecto
+        motive: JSON.stringify(vmotive),
+        visitTime: JSON.stringify(vtime),
         enterTime: timestamp,
         patente: vpatente,
         visitTo: vresident,
