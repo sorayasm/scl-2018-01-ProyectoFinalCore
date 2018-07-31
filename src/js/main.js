@@ -4,7 +4,7 @@ var user = firebase.auth().currentUser;
 if (user) {
     // User is signed in.
 } else {
-    window.location = "index.html";
+    //window.location = "index.html";
 
 }
 
