@@ -1,0 +1,53 @@
+#registro{
+    text-align: center;
+    color: #47525E;
+}
+#label{
+    display: block;
+}
+#visitName{
+    width: 50%;
+}
+#visitDNI{
+    width: 50%;
+}
+#visitCompany{
+    width: 50%;
+}
+#visitMail{
+    width: 50%;
+}
+#visitPatente{
+    width: 50%;
+}
+#selectMotive{
+    width: 50%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+#selectTiempo{
+    width: 50%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+#communityselect{
+    width: 50%;
+    background-color: white;
+    color: #47525E;
+    border-color: rgb(158, 158, 158);
+}
+label{
+    margin-top: 11px;
+}
+#registerVisit{
+    margin-top: 2%;
+    background-color: #BBBE64;
+}
+#boton{
+    text-align: center;
+}
+#espacioVacio{
+    padding: 3%;
+}
