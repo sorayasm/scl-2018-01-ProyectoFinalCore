@@ -6,11 +6,9 @@ header{
     display: flex;
     align-items: center;
 }
-
 #logoCompleto{
     width: 80%;
 }
-
 body{
     background-color: #EFF0EC;
     color: #47525E;
@@ -25,7 +23,7 @@ body{
 #registro{
     text-align: center;
     color: #47525E;
-    padding-top: 1%;
+
 }
 .navbar-brand {
     display: inline-table;
@@ -41,19 +39,51 @@ body{
     padding-right: 3%;
     padding-left: 0;
 }
-#adminName{
-    width: 100%;
-}
-#admin-name{
-    padding-top: 1%;
-}
-#adminName{
-    
-    width: 40%;
-}
-#adminMail{
-    width: 40%;
+#registroAdmin{
+    text-align: center;
+    align-items: center;
 }
 .form-group {
-    margin-bottom: 0;
+    margin-bottom: 0px;
+}
+form{
+    text-align: center;
+}
+#exit{
+    color: #E4BB59;
+}
+
+#adminName{
+    width: 50%;
+}
+#adminMail{
+    width: 50%;
+}
+#adminPhone{
+    width: 50%;
+}
+#adminCompany{
+    width: 50%;
+}
+#adminPassword{
+    width: 50%;
+}
+#key{
+    width: 50%;
+}
+label{
+    margin-top: 13px;
+}
+#registerbutton{
+    margin-top: 2%;
+    background-color: #BBBE64;
+}
+#cuenta{
+    padding-top: 3px;
+}
+#sesión{
+    color: #E4BB59;
+}
+.activado{
+    color: #E4BB59;
 }
