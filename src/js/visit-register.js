@@ -10,15 +10,22 @@ window.onload = () => {
 function gotData(data) {
     community = data.val();
     const keys = Object.keys(community);
-    console.log(keys);
+    //console.log(keys);
     for (i = 0; i < keys.length; i++) {
         const k = keys[i];
         const names = community[k].name;
         const mail = community[k].mail;
-        console.log(names, mail)
+        const company = community[k].company;
+        //console.log(names, mail, company);
+        const appendingTo = document.getElementById("communityselect");
+        const select = document.createElement("option")
+        select.text = company + " - " + names;
+        select.value = mail;
+        appendingTo.appendChild(select);
     }
 
 }
+
 
 function errData(err) {
     console.log("Error!" + err);
@@ -27,6 +34,7 @@ function errData(err) {
 
 let vtime = "Reunión o Evento";
 let vmotive = "15 minutos";
+let vresident = "laboratoria@laboratoria.cl"
 
 
 // Registrar visitas
@@ -44,12 +52,12 @@ function newVisit() {
     newStoreRef.set({
         name: vname,
         DNI: vdni,
-        //company: vcompany,
         mail: vmail,
         motive: JSON.stringify(vmotive), // resolver tema de valor por defecto
         visitTime: JSON.stringify(vtime), // resolver tema de valor por defecto
         enterTime: timestamp,
         patente: vpatente,
+        visitTo: vresident,
         //photo: vphoto
     });
     console.log("registro exitoso")
@@ -65,4 +73,10 @@ function motive(event) {
 function time(event) {
     vtime = this.options[this.selectedIndex].value;
     console.log(vtime)
+}
+
+// select residente
+function resident(event) {
+    vresident = this.options[this.selectedIndex].value;
+    console.log(vresident)
 }
