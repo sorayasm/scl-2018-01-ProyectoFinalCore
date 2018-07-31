@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/visit-register.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/photo.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/navbar.css" />
 </head>
@@ -52,71 +52,70 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-12 col-lg-12">
+                <h2 id="registro">Registro Visitas</h2>
                 <form id="visit-register">
-                    <h1>Registro de visitas</h1>
-                    <br>
-                    <label for="name">Nombre Completo:</label>
-                    <input type="text" id="visitName" aria-placeholder="Ingresa tu nombre">
-                    <br>
-                    <label for="dni">Ingresa tu RUT o DNI sin puntos ni guiones:</label>
-                    <input type="text" id="visitDNI" aria-placeholder="Ingresa tu RUT">
-                    <br>
-                    <label for="company">Empresa o organización:</label>
-                    <input type="text" id="visitCompany" aria-placeholder="Escribe de qué organización vienes">
-                    <br>
-                    <label for="mail">Correo:</label>
-                    <input type="mail" id="visitMail" aria-placeholder="Escribe tu correo">
-                    <br>
-                    <label for="patente">Si vienes en vehículo, escribe la patente:</label>
-                    <input type="text" id="visitPatente" aria-placeholder="Escribe  la patente">
-                    <br>
-                    <label for="motive">Selecciona el motivo de tu visita:</label>
-                    <select onchange="motive.call(this, event)">
-                        <option id="meeting" name="select" value="Reunión o Evento" >Reunión o Evento</option>
-                        <option id="visit" name="select" value="Visita Personal" >Visita Personal</option>
-                        <option id="delivery" name="select" value="Entrega" >Entrega</option>
-                        <option id="info" name="select" value="Información sobre el espacio de CoWork">Información sobre el espacio de CoWork</option>
-                        <option id="other" name="select" value="Otro">Otro</option>
-                        </select>
-                    <br>
-                    <label for="time">Selecciona la duración de tu visita:</label>
-                    <select onchange="time.call(this, event)">
-                        <option id="15" name="select2" value="15 minutos" >15 minutos</option>
-                        <option id="30" name="select2" value="30 minutos" >30 minutos</option>
-                        <option id="45" name="select2" value="45 minutos" >45 minutos</option>
-                        <option id="60" name="select2" value="1 hora" >1 hora</option>
-                        <option id="60" name="select2" value="Hora y media">Hora y media</option>
-                        <option id="120" name="select2" value="2 horas" >2 horas</option>
-                        <option id="180" name="select2" value="3 horas" >3 horas</option>
-                        <option id="240" name="select2" value="4 horas" >4 horas</option>
-                        <option id="300" name="select2" value="5 horas" >5 horas</option>
-                        <option id="360" name="select2" value="6 horas" >6 horas</option>
-                        <option id="420" name="select2" value="7 horas" >7 horas</option>
-                        <option id="480" name="select2" value="8 horas" >8 horas</option>
-                    </select>
-                    <br>
-                    <label for="resident-name">Busca el nombre de la persona que visitas:</label>
-                    <select onchange="resident.call(this, event)" id="communityselect"></select>
-                    <br>
-                    <div class="app">
-                        <a href="#" id="start-camera" class="visible">Haz click para tomar una foto</a>
-                        <video id="camera-stream"></video>
-                        <img id="snap">
-                        <p id="error-message"></p>
-                        <div class="controls">
-                            <a href="#" id="delete-photo" title="Borrar Foto" class="disabled"><i class="far fa-trash-alt"></i></a>
-                            <a href="#" id="take-photo" title="Tomar Foto"><i class="fas fa-camera"></i></a>
-                            <a href="http://conserje-cb884.appspot.com/img" id="save-photo" download="visit.png" title="Guardar Foto" class="disabled"><i class="far fa-check-circle"></i></a>
-                        </div>
-                        <canvas></canvas>
+                    <div class="nombrePersona">
+                        <label id="label" for="name">Nombre Completo</label>
+                        <input type="text" id="visitName" aria-placeholder="Ingresa tu nombre">
                     </div>
-                    <br>
-                    <input type="button" id="registerVisit" onclick="newVisit()" value="Registrar Visita">
+                    <div class="rutPersona">
+                        <label id="label" for="dni">Ingresa tu RUT o DNI sin puntos ni guiones</label>
+                        <input type="text" id="visitDNI" aria-placeholder="Ingresa tu RUT">
+                    </div>
+                    <div class="compañiaPersona">
+                        <label id="label" for="company">Empresa o organización</label>
+                        <input type="text" id="visitCompany" aria-placeholder="Escribe de qué organización vienes">
+                    </div>
+                    <div class="mailPersona">
+                        <label id="label" for="mail">Correo</label>
+                        <input type="mail" id="visitMail" aria-placeholder="Escribe tu correo">
+                    </div>
+                    <div class="patentePersona">
+                        <label id="label" for="patente">Si vienes en vehículo, escribe la patente</label>
+                        <input type="text" id="visitPatente" aria-placeholder="Escribe  la patente">
+                    </div>
+                    <div class="motivoPersona">
+                        <label id="label" for="motive">Selecciona el motivo de tu visita:</label>
+                        <select id="selectMotive" onchange="motive.call(this, event)" class="btn btn-secondary dropdown-toggle">
+                            <option id="meeting" name="select" value="Reunión o Evento" >Reunión o Evento</option>
+                            <option id="visit" name="select" value="Visita Personal" >Visita Personal</option>
+                            <option id="delivery" name="select" value="Entrega" >Entrega</option>
+                            <option id="info" name="select" value="Información sobre el espacio de CoWork">Información Sobre Espacio CoWork</option>
+                            <option id="other" name="select" value="Otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="duracionVisita">
+                        <label id="label" for="time">Selecciona la duración de tu visita:</label>
+                        <select id="selectTiempo" onchange="time.call(this, event)" class="btn btn-secondary dropdown-toggle">
+                            <option id="15" name="select2" value="15 minutos" >15 minutos</option>
+                            <option id="30" name="select2" value="30 minutos" >30 minutos</option>
+                            <option id="45" name="select2" value="45 minutos" >45 minutos</option>
+                            <option id="60" name="select2" value="1 hora" >1 hora</option>
+                            <option id="60" name="select2" value="Hora y media">Hora y media</option>
+                            <option id="120" name="select2" value="2 horas" >2 horas</option>
+                            <option id="180" name="select2" value="3 horas" >3 horas</option>
+                            <option id="240" name="select2" value="4 horas" >4 horas</option>
+                            <option id="300" name="select2" value="5 horas" >5 horas</option>
+                            <option id="360" name="select2" value="6 horas" >6 horas</option>
+                            <option id="420" name="select2" value="7 horas" >7 horas</option>
+                            <option id="480" name="select2" value="8 horas" >8 horas</option>
+                        </select>
+                    </div>
+                    <div class="nombreComunidad">
+                        <label id="label" for="resident-name">Busca el nombre de la persona que visitas:</label>
+                        <select onchange="resident.call(this, event)" id="communityselect" class="btn btn-secondary dropdown-toggle"></select>
+                    </div>
                 </form>
             </div>
         </div>
+        <div class="row">
+            <div id="boton" class="col-12 col-md-12 col-lg-12">
+                <input type="button" id="registerVisit" class="btn btn-outline-light text-white" onclick="newVisit()" value="REGISTRAR VISITA">
+            </div>
+        </div>
     </div>
+    <footer id="espacioVacio"></footer>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script>
         // Initialize Firebase
