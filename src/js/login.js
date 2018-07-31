@@ -8,11 +8,6 @@ function loginWithFirebase() {
             console.log("Usuario inició sesión con éxito");
             window.location = "panel.html";
         })
-        .then(() => {
-            if (passwordValue.length <= 6) {
-                alert("Revisa todos los datos ingresados. ");
-            }
-        })
         .catch((error) => {
             console.log("Error de firebase > Código > " + error.code);
             console.log("Error de firebase > Mensaje > " + error.message);
