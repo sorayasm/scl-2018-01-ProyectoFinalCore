@@ -82,15 +82,27 @@ function resident(event) {
 
 // enviar mail
 function sendMail(vresident) {
-    const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey(process.env.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);
-    const msg = {
-        to: vresident,
-        from: 'quetltehue@gmail.com',
-        subject: 'Sending with SendGrid is Fun',
-        text: 'and easy to do anywhere, even with Node.js',
-        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-    };
-    sgMail.send(msg);
+    const nodemailer = require('nodemailer');
 
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'queltehue.info@gmail.com',
+            pass: 'queltehue.info1'
+        }
+    });
+
+    const mailOptions = {
+        from: 'queltehue.info@gmail.com', // sender address
+        to: vresident, // list of receivers
+        subject: 'Subject of your email', // Subject line
+        html: '<p>Your html here</p>' // plain text body
+    };
+
+    transporter.sendMail(mailOptions, function(err, info) {
+        if (err)
+            console.log(err)
+        else
+            console.log(info);
+    });
 }
