@@ -63,7 +63,7 @@ function gotData(data) {
             </div>
         </div>
         
-        `
+        `+ div.innerHTML;
         
         
         appendingTo.appendChild(div);
