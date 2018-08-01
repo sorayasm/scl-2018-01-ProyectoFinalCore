@@ -1,0 +1,97 @@
+body{
+    background-color: #EFF0EC;
+ }
+ h1{
+     font-family: 'Lato', sans-serif;
+     color: #47525E;
+     line-height: 34px;
+     text-align: center;
+     margin-bottom: 25px;
+     margin-top: 25px;
+ }
+ .buttonRegister{
+   background-color: #BBBE64;
+   color: #EFF0EC;
+   border-radius: 8px;
+   width: 288px;
+   height: 50px;
+ }
+ .buttonRegisterCol{
+     display: flex;
+     justify-content: center;
+ }
+ #formCompany{
+     display: none;
+ }
+ #formMotive{
+     display: none;
+ }
+ #formCamera{
+     display: none;
+ }
+ #formTime{
+     display: none;
+ }
+ #formNameResident{
+     display: none;
+ }
+ #formFinishButton{
+     display: none;
+ }
+ #secondButton{
+     display: none;
+ }
+ #thirdButton{
+     display: none;
+ }
+ #firstButtonBack{
+     display: none;
+ }
+ #secondButtonBack{
+     display: none;
+ }
+ #thirdButtonBack{
+     display: none;
+ }
+ .buttonNext{
+     background-color: #BBBE64;
+     color: #EFF0EC;
+     border: 0px;
+     padding: 0px;
+     border-radius: 8px;
+     width: 200px;
+     height: 80px;
+     font-weight: 800;
+     font-size: larger;
+ }
+ .buttonBack{
+     background-color: #E4BB59;
+     color: #EFF0EC;
+     border: 0px;
+     padding: 0px;
+     border-radius: 8px;
+     width: 200px;
+     height: 80px;
+     font-weight: 800;
+     font-size: larger;
+ }
+ .buttonNextContainer{
+     text-align: right;
+     display: flex;
+     justify-content: flex-end;
+ }
+ .buttonNextContainer2{
+     text-align: right;
+ }
+ .buttonBackContainer3{
+     text-align: right;
+     display: flex;
+     justify-content: flex-end;
+ }
+ h2{
+     text-align: center;
+ }
+ .finalMessage{
+     padding-top: 20px;
+     padding-bottom: 20px
+ }
