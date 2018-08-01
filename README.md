@@ -10,9 +10,7 @@ En este proyecto una empresa de coworking ha decidido contratarte para reinventa
 
 Somos Queltehue, una solución digital a la sobrecarga de trabajo manual que requiere el registro de visitas de los Cowork en Chile. Atacamos la problemática del registro manual del ingreso de visitantes.
 
-Es así como nuestra solución moderniza el proceso de registro, permitiendo almacenar la información en tiempo real y dando aviso a los residentes de sus visitas. Además, ofrecemos una alternativa de sistema de seguridad con nuestro botón de pánico incluido que contacta con las principales líneas de emergencia.
-
-El mayor beneficio es la optimización de los tiempos de registro automatizado, a través de un sistema sustentable que no utiliza papel. Almacena un banco de datos de información que puede ser relevante para el futuro arriendo de espacios del Cowork, y mejorar el control de acceso y estadía de los visitantes
+Es así como nuestra solución moderniza el proceso de registro, permitiendo almacenar la información en tiempo real. El mayor beneficio es la optimización de los tiempos de registro automatizado, a través de un sistema sustentable que no utiliza papel. Almacena un banco de datos de información que puede ser relevante para el futuro arriendo de espacios del Cowork, y mejorar el control de acceso y estadía de los visitantes
 
 Nuestro proyecto es el adecuado ya que está creado en base a las necesidades de los clientes y usuarios. Además de aportar mayor seguridad en el entorno en de los Coworks.
 

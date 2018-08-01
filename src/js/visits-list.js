@@ -19,7 +19,7 @@ function gotData(data) {
         //console.log(names, dni, enterTime, motive, patente, time, mail, visitTo)
         const appendingTo = document.getElementById("visitlist");
         const div = document.createElement("div")
-        //div.innerHTML = names + " " + dni + " " + enterTime + " " + motive + " " + patente + " " + time + " " + mail + "" + visitTo;
+            //div.innerHTML = names + " " + dni + " " + enterTime + " " + motive + " " + patente + " " + time + " " + mail + "" + visitTo;
         div.innerHTML = `
         <div id="publicar">
             <div class="row">
@@ -76,8 +76,8 @@ function gotData(data) {
                 </div>
             </div>
         </div>
-        `+ div.innerHTML;
-        
+        ` + div.innerHTML;
+
         appendingTo.appendChild(div);
     }
 
