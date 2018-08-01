@@ -82,13 +82,13 @@ function resident(event) {
 
 // enviar mail
 function sendMail(vresident) {
-    const nodemailer = require('nodemailer');
+    const nodemailer = require("nodemailer");
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: "gmail",
         auth: {
-            user: 'queltehue.info@gmail.com',
-            pass: 'queltehue.info1'
+            user: '',
+            pass: ''
         }
     });
 
