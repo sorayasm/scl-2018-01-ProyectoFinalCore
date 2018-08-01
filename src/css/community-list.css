@@ -1,0 +1,26 @@
+#listaComunidad{
+    text-align: center;
+    color: #47525E;
+    padding-bottom: 2%;
+}
+h3{
+    margin-top: 0;
+    display: inline;
+    padding-right: 5px;
+}
+#iconoComunidad{
+    justify-content: center;
+}
+#icono{
+    color: #E4BB59;
+}
+#residentlist{
+    padding-top: 3%;
+}
+
+#publicar{
+    border: 1px solid #47525E;
+    background-color: white;
+    color: #47525E;
+    padding: 1% 5%;
+}
