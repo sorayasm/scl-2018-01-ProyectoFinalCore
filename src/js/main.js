@@ -21,3 +21,5 @@ function logoutWithFirebase() {
             console.log("Error de Firebase > Mensaje > " + error.message)
         });
 }
+
+module.exports = logoutWithFirebase;

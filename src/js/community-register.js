@@ -31,3 +31,6 @@ function limpiar() {
     document.getElementById("residentCompany").value = "";
     document.getElementById("residentMail").value = "";
 }
+
+module.exports = newResident;
+module.exports = limpiar;
