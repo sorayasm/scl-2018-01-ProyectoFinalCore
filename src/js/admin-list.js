@@ -14,9 +14,45 @@ function gotData(data) {
         const phone = admin[k].phone;
         //console.log(names, dni, enterTime, motive, patente, time, mail)
         const appendingTo = document.getElementById("adminlist");
-        const li = document.createElement("li")
-        li.innerHTML = names + " " + mail + " " + company + " " + phone;
-        appendingTo.appendChild(li);
+        const div = document.createElement("div")
+        //div.innerHTML = names + " " + mail + " " + company + " " + phone;
+        div.innerHTML = 
+        `<div id="publicar">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-6">
+                    <div class="nombre">
+                        <h5>Nombre Completo</h5>
+                        <h5 class="font-weight-bold">${names}</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-6">
+                    <div class="correo">
+                        <h5>Correo</h5>
+                        <h5 class="font-weight-bold">${mail}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-6">
+                    <div class="empresa">
+                        <h5>Empresa</h5>
+                        <h5 class="font-weight-bold">${company}</h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-6">
+                    <div class="teléfono">
+                        <h5>Teléfono</h5>
+                        <h5 class="font-weight-bold">${phone}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+        
+        
+        
+        appendingTo.appendChild(div);
     }
 
 }
