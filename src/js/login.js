@@ -14,3 +14,5 @@ function loginWithFirebase() {
             alert("Revisa todos los datos ingresados. Correo y contraseña son obligatorios.");
         });
 }
+
+module.exports = loginWithFirebase;
