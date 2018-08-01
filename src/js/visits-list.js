@@ -15,10 +15,11 @@ function gotData(data) {
         const patente = visitas[k].patente;
         const mail = visitas[k].mail;
         const time = visitas[k].visitTime;
-        //console.log(names, dni, enterTime, motive, patente, time, mail)
+        const visitTo = visitas[k].visitTo;
+        //console.log(names, dni, enterTime, motive, patente, time, mail, visitTo)
         const appendingTo = document.getElementById("visitlist");
         const li = document.createElement("li")
-        li.innerHTML = names + " " + dni + " " + enterTime + " " + motive + " " + patente + " " + time + " " + mail;
+        li.innerHTML = names + " " + dni + " " + enterTime + " " + motive + " " + patente + " " + time + " " + mail + "" + visitTo;
         appendingTo.appendChild(li);
     }
 

@@ -82,12 +82,15 @@ function resident(event) {
 
 // enviar mail
 function sendMail(vresident) {
-    Email.send("queltehue.info@gmail.com",
-        vresident,
-        "This is a subject",
-        "this is the body",
-        "smtp.sendgrid.net",
-        "apikey",
-        "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");
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.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);
+    const msg = {
+        to: vresident,
+        from: 'quetltehue@gmail.com',
+        subject: 'Sending with SendGrid is Fun',
+        text: 'and easy to do anywhere, even with Node.js',
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    };
+    sgMail.send(msg);
 
 }
