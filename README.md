@@ -1,6 +1,6 @@
 # Proyecto Queltehue
 Somos Queltehue, una solución digital para el registro manual del ingreso de visitantes de CoWorks. 
-<p align="center"><a href="https://sorayasm.github.io/scl-2018-01-ProyectoFinalCore/" target="_blank"><img src="https://raw.githubusercontent.com/sorayasm/scl-2018-01-ProyectoFinalCore/master/src/img/queltehue.PNG" alt="Vista previa" class="inline"/></a></p>
+![VistaPrevia](https://raw.githubusercontent.com/sorayasm/scl-2018-01-ProyectoFinalCore/blob/master/src/img/queltehue.PNG)
 
 ## Preámbulo
 El registro de visitantes en una empresa en América Latina es un proceso tedioso y manual. Lo común es que una persona esté en la recepción tomando nota - a veces con papel y lápiz - de cada visitante. Por razones de seguridad, usualmente piden a cada visitante dejar una identificación. Si vivimos en la era digital, ¿por qué seguimos registrando visitantes como si fuera 1985? ¿Qué tal si sustituimos a la persona en recepción por una tablet? ¿Qué tal si en lugar de pedir una identificación, tomamos una foto? 
