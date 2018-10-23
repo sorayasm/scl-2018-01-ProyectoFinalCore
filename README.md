@@ -1,5 +1,7 @@
 # Proyecto Queltehue
 Somos Queltehue, una solución digital para el registro manual del ingreso de visitantes de CoWorks. 
+Proyecto creado para [Laboratoria](https://www.laboratoria.la)
+
 ![queltehue](https://user-images.githubusercontent.com/18310311/47162803-13f7c880-d2cb-11e8-80a1-bf4073024234.PNG)
 
 ## Preámbulo
